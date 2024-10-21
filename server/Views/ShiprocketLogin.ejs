@@ -1,0 +1,75 @@
+<%- include('./Header.ejs');-%>
+
+    <div class="main-content container-fluid">
+        <div class="page-title mb-3">
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-1 order-last">
+                    <h3>ShipRocket Login </h3>
+                </div>
+                <!-- <div class="col-12 col-md-6 order-md-2 order-first">
+                    <div class="d-flex justify-content-end">
+                        <a href="/admin/MiddleBanner" class="btn btn-secondary"> Back</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <section id="basic-vertical-layouts">
+            <div class="row match-height">
+                <div class="col-md-12 col-sm-12 mx-auto">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form action="/admin/shiprocketLogAction" method="POST">
+                                    <%if (message.length> 0) {%>
+                                        <div class="alert alert-dismissible"
+                                            style="background:#5bc093;border-style: solid;  border-color:#5bc093; border-width:1px; color: #fff;">
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                            <strong>Message!</strong>
+                                            <%= message %>
+                                        </div>
+                                        <% } %>
+                                            <%if(error.length> 0) {%>
+                                                <div class="alert alert-dismissible"
+                                                    style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="alert"></button>
+                                                    <strong>Error!</strong>
+                                                    <%= error %>
+                                                </div>
+                                                <% } %>
+                                                    <div class="form-group position-relative has-icon-left">
+                                                        <label for="username">Username:</label>
+                                                        <div class="position-relative">
+                                                            <input type="text" name="email" class="form-control"
+                                                            id="username">
+                                                            <div class="form-control-icon">
+                                                                <i data-feather="user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group position-relative has-icon-left">
+                                                        <label for="username">password:</label>
+                                                        <div class="position-relative">
+                                                            <input type="password" name="password" class="form-control"
+                                                                id="password">
+                                                            <div class="form-control-icon">
+                                                                <i data-feather="lock"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="clearfix">
+                                                        <button class="btn btn-primary float-end">Submit</button>
+                                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <%- include('./Footer')-%>

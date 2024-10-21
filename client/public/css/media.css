@@ -1,0 +1,1383 @@
+/*=============================================================================================================================
+ 									max-width: 1409px Start
+ ==============================================================================================================================*/
+@media only screen and (max-width: 1409px) {
+	.menu .nav-item a {
+		padding: 10px;
+	}
+
+	.slidertext {
+		left: 5%;
+		max-width: 550px;
+	}
+}
+
+/*=============================================================================================================================
+ 									max-width: 1409px End
+ ==============================================================================================================================*/
+
+
+/*=============================================================================================================================
+ 									max-width: 1199px   Start
+ ==============================================================================================================================*/
+@media only screen and (max-width: 1199px) {
+	.navIcon {
+		display: block;
+	}
+
+	.slidertext h3 {
+		font-size: 40px;
+	}
+
+	.slidertext a {
+		padding: 12px 40px;
+	}
+
+	.left-bnr h5 {
+		font-size: 25px;
+	}
+
+	.left-bnr h3 {
+		font-size: 30px;
+	}
+
+	.homecategory .category_text h2 {
+		font-size: 30px;
+	}
+
+	.bnrser-text .heading span {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.btn,
+	.btn-primary {
+		margin-top: 30px;
+		padding: 15px 35px;
+	}
+
+	.bottom-bnr .botbnr-text h3 {
+		font-size: 25px;
+	}
+
+	.bottom-bnr .botbnr-text h5 {
+		font-size: 20px;
+	}
+
+	.bottom-bnr .botbnr-text p {
+		margin-top: 15px;
+	}
+
+	.bottom-bnr .botbnr-dec {
+		max-width: 450px;
+		left: 45px;
+	}
+
+	.blog .owl-nav .owl-prev,
+	.blog .owl-nav .owl-next {
+		top: 25%;
+	}
+
+	.blog .owl-nav .owl-prev span,
+	.blog .owl-nav .owl-next span,
+	.testimonial .owl-nav .owl-prev span,
+	.testimonial .owl-nav .owl-next span {
+		font-size: 50px;
+	}
+
+	.middle-footer h5 {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+
+	.accordion {
+		display: none;
+	}
+
+	/*============================= Login Page Start =============================*/
+	.login form {
+		padding: 35px !important;
+	}
+
+	.login-bg {
+		padding: 0;
+	}
+
+	/*============================= Login Page End =============================*/
+
+	/*============================= Product Page Start =============================*/
+	.down {
+		padding: 5px 15px;
+	}
+
+	.number {
+		padding: 5px 35px;
+	}
+
+	.add-to-cart a {
+		font-size: 14px;
+	}
+
+	.pro-content h1 {
+		font-size: 23px;
+	}
+
+	.text-decor-bold h2 {
+		font-size: 26px;
+	}
+
+	.clearfix .btn {
+		padding: 10px 30px;
+	}
+
+	.add-cart a {
+		padding: 12px 50px;
+	}
+
+	/*============================= Product Page End =============================*/
+	/*============================= Contact-us Page Start =============================*/
+	.contact .btn {
+		padding: 10px 40px;
+	}
+
+	/*============================= Contact-us Page End =============================*/
+	/*============================= Blog Page Start =============================*/
+	.single-blog-contact h5 {
+		font-size: 20px;
+	}
+
+	.single-blog-contact p {
+		height: 195px;
+	}
+
+	/*============================= Blog Page End =============================*/
+	/*=============================================================================================================================
+ 									max-width: 1199px   End
+ ==============================================================================================================================*/
+
+	/*=============================================================================================================================
+									max-width: 991px   Start
+==============================================================================================================================*/
+	@media only screen and (max-width: 991px) {
+
+		.hedLineTxt {
+			font-size: 12px;
+		}
+
+
+		/* =================================  Navbar ================================= */
+		.close-nav,
+		.navbar {
+			display: block;
+		}
+
+		.close-nav i {
+			font-size: 16px;
+			color: var(--color-white);
+		}
+
+		.smenu {
+			background: #fffdef;
+		}
+
+		.cmenu button {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+		}
+
+		.accordion-body {
+			padding: 0;
+		}
+
+		.second-menuTwo .accordion-button::after {
+			width: 20px;
+			height: 20px;
+			background-image: url(../image/marrow.png) !important;
+		}
+
+		.resNav .close-nav {
+			background-color: #1e1e1e;
+			padding: 12px 15px;
+			width: 100%;
+			color: #fff;
+			letter-spacing: 1px;
+			display: flex;
+			margin-bottom: 0 !important;
+		}
+
+		.menu .nav-link {
+			border-bottom: none !important;
+		}
+
+		.second-menuTwo .accordion-body {
+			border-bottom: 1px solid rgba(18, 18, 18, 0.1) !important;
+		}
+
+		.nav-link {
+			font-size: 16px;
+			padding: 10px 15px;
+			color: var(--color-black);
+			text-transform: capitalize;
+			border-bottom: 1px solid rgba(18, 18, 18, 0.1) !important;
+		}
+
+		.resNav {
+			overflow-x: auto;
+			position: fixed;
+			top: 0;
+			left: -320px;
+			bottom: 0;
+			width: 320px;
+			background-color: var(--color-white);
+			z-index: 99999;
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+			transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+		}
+
+		.overlay {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 999;
+			transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+			display: none;
+		}
+
+		.navActive {
+			left: -0px;
+		}
+
+		.resNav span {
+			font-size: 18px;
+		}
+
+		.overlayActive,
+		.second-menuTwo,
+		.closeBtn {
+			display: block;
+		}
+
+		.second-menu .first-menu {
+			display: none !important
+		}
+
+		.slid-img .owl-carousel .owl-item .pro-img img {
+			min-width: 950px;
+			overflow: hidden;
+		}
+
+		.slidertext h3 {
+			font-size: 35px;
+			line-height: 50px;
+		}
+
+		.slidertext {
+			max-width: 480px;
+		}
+
+		.slidertext a {
+			margin-top: 40px !important;
+		}
+
+		.probnr-contant p {
+			text-transform: uppercase;
+			font-size: 18px;
+		}
+
+		.probnr-thumbtext a,
+		.left-text a.btn,
+		.btn.btn-primary,
+		.probnr-thumbtext a {
+			padding: 10px 40px;
+			font-size: 12px;
+		}
+
+		.btn.btn-primary {
+			margin-top: 20px;
+		}
+
+		.blog .head-text p {
+			line-height: 25px;
+			font-size: 14px;
+		}
+
+		.bottom-bnr .botbnr-dec {
+			left: 30px;
+		}
+
+		.left-text a.btn {
+			margin-top: 20px;
+		}
+
+		.center-banner,
+		.img-bnr,
+		.product-bnr,
+		.left-bnr,
+		.right-bnr,
+		.banner-ser,
+		.product,
+		.ser-bnr,
+		.topbnr,
+		.bottom-bnr,
+		.special-bnr,
+		.blog,
+		.homecategory,
+		.testimonial,
+		footer {
+			margin-top: 60px;
+		}
+
+		.center-banner,
+		.img-bnr,
+		.product-bnr,
+		.left-bnr,
+		.right-bnr,
+		.banner-ser,
+		.product,
+		.ser-bnr,
+		.topbnr,
+		.bottom-bnr,
+		.special-bnr,
+		.blog,
+		.homecategory,
+		.testimonial,
+		footer {
+			margin-top: 40px;
+		}
+
+		#slider .owl-nav .owl-prev,
+		#slider .owl-nav .owl-next,
+		.homecategory .owl-nav .owl-prev,
+		.homecategory .owl-nav .owl-next,
+		.blog .owl-nav .owl-prev,
+		.blog .owl-nav .owl-next,
+		.testimonial .owl-nav .owl-prev,
+		.testimonial .owl-nav .owl-next,
+		#product .owl-nav .owl-prev,
+		#product .owl-nav .owl-next {
+			position: unset;
+			margin-top: 40px;
+		}
+
+		#slider .owl-nav .owl-prev,
+		#slider .owl-nav .owl-next,
+		.homecategory .owl-nav .owl-prev span,
+		.homecategory .owl-nav .owl-next span,
+		.blog .owl-nav .owl-prev span,
+		.blog .owl-nav .owl-next span,
+		.testimonial .owl-nav .owl-prev span,
+		.testimonial .owl-nav .owl-next span,
+		#product .owl-nav .owl-prev,
+		#product .owl-nav .owl-next {
+			color: var(--color-white);
+		}
+
+		#slider .owl-nav .owl-prev,
+		.homecategory .owl-nav .owl-prev,
+		.blog .owl-nav .owl-prev,
+		.testimonial .owl-nav .owl-prev,
+		.product .owl-nav .owl-prev,
+		#slider .owl-nav .owl-next,
+		.homecategory .owl-nav .owl-next,
+		.blog .owl-nav .owl-next,
+		.testimonial .owl-nav .owl-next,
+		.product .owl-nav .owl-next {
+			display: inline-block;
+		}
+
+		.homecategory .category_text h2 {
+			font-size: 25px;
+		}
+
+		.bnrser-text p {
+			font-size: 12px;
+			line-height: 20px;
+			margin-top: 15px;
+		}
+
+		.bnrser-text .heading span {
+			font-size: 25px;
+			line-height: 35px;
+		}
+
+		.probnr-thumbtext h4 {
+			font-size: 18px;
+		}
+
+		.probnr-thumbtext span {
+			font-size: 16px;
+		}
+
+		.bottom-bnr .botbnr-text h5 {
+			font-size: 18px;
+		}
+
+		.bottom-bnr .botbnr-text h3 {
+			font-size: 22px;
+		}
+
+		.bottom-bnr .botbnr-text p {
+			font-size: 12px;
+		}
+
+		.newsletter .input-group .btn {
+			padding: 16px 40px;
+		}
+
+		.copy span {
+			font-size: 14px;
+		}
+
+		.middle-footer .f-logo p {
+			line-height: 25px;
+			margin-top: 15px;
+		}
+
+		.middle-footer .social-media {
+			margin-top: 15px;
+		}
+
+		.middle-footer .footer-con {
+			padding: 30px 0;
+		}
+
+		.fother-con {
+			margin-top: 30px
+		}
+
+		.accordion-item {
+			background-color: transparent !important;
+			border: none;
+		}
+
+		.accordion-header button {
+			padding: 0;
+			box-shadow: none !important;
+			border: none;
+			background-color: transparent !important;
+			color: var(--color-white) !important;
+			font-size: 25px;
+			font-weight: 600;
+			width: 100%;
+		}
+
+		.accordion-button::after {
+			flex-shrink: 0;
+			width: 1.25rem;
+			height: 1.25rem;
+			margin-left: auto;
+			content: "";
+			background-image: url(../image/farrow.png) !important;
+			background-repeat: no-repeat;
+			background-size: 1.25rem;
+			transition: transform .2s ease-in-out;
+		}
+
+		.middle-footer h5 {
+			margin-bottom: 10px;
+		}
+
+		.middle-footer .accordion-item ul {
+			margin-bottom: 15px;
+			background-color: #383838 !important;
+		}
+
+		.accordion {
+			display: block;
+		}
+
+		.footer-text {
+			display: none;
+		}
+
+		.owl-theme .owl-nav {
+			display: none;
+		}
+
+		.accordion-button.collapsed,
+		.menu .nav-item a:hover,
+		.cart:hover i.bag,
+		.review h3 strong:hover,
+		.accordion-button:not(.collapsed) {
+			background-color: var(--color-white) !important;
+		}
+
+		/*============================= Login Page Start =============================*/
+		.left-side input,
+		.right-side input,
+		.sign-btn,
+		.google {
+			padding: 8px;
+		}
+
+		.sign-btn span,
+		.google span {
+			font-size: 14px;
+		}
+
+		.signin {
+			font-size: 30px;
+			margin-bottom: 25px;
+		}
+
+		.google img {
+			width: 20px;
+			height: 20px;
+		}
+
+		.an-account {
+			font-size: 14px;
+		}
+
+		/*============================= Login Page End =============================*/
+		/*============================= Product Page Start =============================*/
+		.qty {
+			display: block !important;
+		}
+
+		.add-cart {
+			margin-top: 25px;
+			margin-left: 0 !important;
+		}
+
+		.size-name span {
+			padding: 8px 15px;
+			font-size: 12px;
+		}
+
+		.number {
+			padding: 5px 40px;
+		}
+
+		/*============================= Product Page End =============================*/
+		/*============================= Category Page Start =============================*/
+		.list-group .nav-item .accordion-button.active::after,
+		.list-group .nav-item .accordion-button:hover::after {
+			background-image: url("../image/down-arrow-3.png") !important;
+		}
+
+		.list-group .nav-item a.accordion-button {
+			font-size: 14px;
+		}
+
+		.product-grid {
+			width: 50%;
+		}
+
+		/*============================= Category Page End =============================*/
+		/*============================= Return & Exchange Start =============================*/
+		.accordion-item {
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, .125);
+		}
+
+		.accordion-item button {
+			padding: 10px;
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--color-black) !important;
+		}
+
+		.exchange p {
+			font-size: 14px;
+		}
+
+		.accordion-button::after {
+			background-image: url(../image/down-arrow-1.png) !important;
+		}
+
+		/*============================= Return & Exchange End =============================*/
+		/*============================= Thank You For Visit Start =============================*/
+		.visit {
+			font-size: 40px;
+		}
+
+		.thank-visit {
+			padding: 70px 0;
+		}
+
+		/*============================= Thank You For Visit End =============================*/
+	}
+
+	/*=============================================================================================================================
+									max-width: 991px   End
+==============================================================================================================================*/
+	/*=============================================================================================================================
+ 									Max-Width: 767px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 767px) {
+		.slidertext {
+			max-width: 430px;
+		}
+
+		.slid-img .owl-carousel .owl-item .pro-img img {
+			min-width: 650px !important;
+		}
+
+		.slidertext p {
+			margin-top: 10px;
+		}
+
+		.slidertext a {
+			margin-top: 25px !important;
+		}
+
+		.slid-img .owl-carousel .owl-item .pro-img img {
+			min-width: 1030px;
+			overflow: hidden;
+		}
+
+		.slidertext h3 {
+			font-size: 32px;
+			line-height: 45px;
+		}
+
+		.slidertext p {
+			height: 65px;
+			overflow: hidden;
+		}
+
+		.bottom-bnr .botbnr-text p {
+			display: none;
+		}
+
+		.probnr-contant p {
+			font-size: 14px;
+		}
+
+		.left-bnr h5 {
+			font-size: 18px;
+		}
+
+		.homecategory .category_text h2 {
+			font-size: 20px;
+		}
+
+		.bottom-bnr .botbnr-text h5 {
+			font-size: 14px;
+		}
+
+		.leftbnr-contant {
+			padding: 100px 0px;
+		}
+
+		.testi .test-con p {
+			line-height: 20px;
+		}
+
+		.bottom-bnr .botbnr-text h3 {
+			font-size: 18px;
+		}
+
+		.bnrser-text p {
+			display: none;
+		}
+
+		.left-bnr h3 {
+			font-size: 25px;
+		}
+
+		.probnr-thumbtext span {
+			font-size: 12px;
+		}
+
+		.pro-img .button-group {
+			opacity: 1;
+			position: unset;
+			margin-top: 20px;
+			text-align: left !important;
+		}
+
+		.owl-theme .owl-nav {
+			margin-top: 20px;
+		}
+
+		.button-group {
+			text-align: center;
+		}
+
+		.mainimg {
+			height: auto;
+		}
+
+		/*============================= Product Page Start =============================*/
+		.pro-content {
+			order: 3;
+		}
+
+		.small-slid {
+			order: 2;
+		}
+
+		.pro-content {
+			margin-top: 30px;
+		}
+
+		.tab-pane p {
+			font-size: 12px;
+		}
+
+		.pro-content h1 {
+			font-size: 22px;
+		}
+
+		.tab-content h5 {
+			letter-spacing: 0;
+		}
+
+		.qty-name {
+			margin: 15px 0 !important;
+		}
+
+		/*============================= Product Page End =============================*/
+		/*============================= Wishlist Page Start =============================*/
+		.wish-btn-group .btn {
+			padding: 8px 20px;
+		}
+
+		.wish-btn-group .btn i {
+			font-size: 14px;
+		}
+
+		/*============================= Wishlist Page End =============================*/
+		/*============================= Category Page Start =============================*/
+		#column-left {
+			display: none;
+		}
+
+		.category {
+			margin-top: 20px !important;
+		}
+
+		/*============================= Category Page End =============================*/
+		/*============================= About-us Page Start =============================*/
+		.about-us {
+			margin-top: 20px !important;
+		}
+
+		.about-txt {
+			font-size: 30px;
+		}
+
+		/*============================= About-us Page End =============================*/
+		/*============================= track-order Page Start =============================*/
+		.order-confirmed,
+		.order-history h6 {
+			display: inline-block;
+		}
+
+		.order-history h6 {
+			margin-left: 10px;
+		}
+
+		.dots {
+			padding: 20px;
+		}
+
+		/*============================= track-order Page End =============================*/
+		.center-banner,
+		.img-bnr,
+		.product-bnr,
+		.left-bnr,
+		.right-bnr,
+		.banner-ser,
+		.ser-bnr,
+		.topbnr,
+		.bottom-bnr,
+		.special-bnr,
+		.blog,
+		.homecategory,
+		.testimonial,
+		footer {
+			margin-top: 20px !important;
+		}
+
+		.center-bnr,
+		.right-contant,
+		.service-contant,
+		.ser-con,
+		.spebnr-con,
+		.webi-blog,
+		#category,
+		.testi,
+		.related-product {
+			margin-top: 20px !important;
+		}
+		.tbmrg{
+			margin-top: 20px !important;
+			margin-bottom: 20px !important;
+		}
+		.button-group{
+			display: none;
+		}
+		
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 767px   End
+ ==============================================================================================================================*/
+
+	/*=============================================================================================================================
+ 									Max-Width: 600px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 600px) {
+		.center-bnr-contant {
+			padding: 10px;
+		}
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 600px   End
+ ==============================================================================================================================*/
+
+	/*=============================================================================================================================
+ 									Max-Width: 575px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 575px) {
+		.slid-img .owl-carousel .owl-item .pro-img img {
+			min-width: 650px;
+		}
+
+		.slidertext {
+			max-width: 300px;
+		}
+
+		.slidertext h3 {
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		.slidertext p {
+			height: 55px;
+			font-size: 12px;
+			line-height: 25px;
+			margin-top: 10px;
+		}
+
+		.slidertext a {
+			margin-top: 20px !important;
+		}
+
+		.heading {
+			font-size: 25px;
+		}
+
+		.center-bnr,
+		.right-contant,
+		.service-contant,
+		.ser-con,
+		.spebnr-con,
+		.webi-blog,
+		#category,
+		.testi {
+			margin-top: 25px;
+		}
+
+		.center-banner .cen-img,
+		.bnrser-img {
+			margin-top: 30px;
+		}
+
+		.probnr-contant p {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+
+		.probnr-thumbtext span {
+			font-size: 16px;
+		}
+
+		.homecategory .category_text h2 {
+			font-size: 30px;
+		}
+
+		.owl-nav .owl-prev::after,
+		.owl-nav .owl-next::after {
+			width: 18px;
+			height: 18px;
+			background-image: url(../image/sarrow-1.png);
+		}
+
+		/*============================= Product Page Start =============================*/
+		hr {
+			height: 1px;
+			margin: 12px 0;
+		}
+
+		.pro-content {
+			margin-top: 30px;
+		}
+
+		.tab-content h5 {
+			font-size: 18px;
+		}
+
+		.table td,
+		.form-group label {
+			font-size: 14px;
+		}
+
+		.leftbnr-contant {
+			background-image: url(../image/left-banner/left-banner-1.jpg);
+			background-position: center;
+			padding: 70px 0;
+		}
+
+		/*============================= Product Page End =============================*/
+		/*============================= Wishlist Page Start =============================*/
+		.wish-btn-group .btn {
+			padding: 5px 15px;
+		}
+
+		.wish-btn-group .btn i {
+			font-size: 12px;
+		}
+
+		.list-contant td {
+			font-size: 12px;
+		}
+
+		/*============================= Wishlist Page End =============================*/
+		/*============================= Add to Cart Page Start =============================*/
+		.pull-right a {
+			margin-left: 0 !important;
+			margin-top: 10px;
+			padding: 6px 10px;
+			display: block;
+		}
+
+		/*============================= Add to Cart Page End =============================*/
+		/*============================= About Page Start =============================*/
+		.about-headtxt,
+		.about-headimg {
+			margin-top: 30px;
+		}
+
+		.shop-txt {
+			font-size: 25px;
+		}
+
+		/*============================= About Page End =============================*/
+		/*============================= track-order Page Start =============================*/
+		.order-confirmed i {
+			font-size: 20px;
+		}
+
+		.order-confirmed,
+		.order-pending {
+			padding: 15px;
+		}
+
+		.order-line {
+			margin: 0px 26px;
+		}
+
+		.track-order .youroder-details {
+			padding: 10px;
+		}
+
+		.cartname {
+			padding: 5px 10px;
+		}
+
+		.track-order .your-order h5 {
+			font-size: 16px;
+		}
+
+		/*============================= track-order Page End =============================*/
+		/*============================= Account Page Start =============================*/
+		.account-detail h6 {
+			font-size: 15px;
+		}
+
+		.account-detail i {
+			font-size: 20px;
+		}
+
+		.account-detail {
+			padding: 15px 20px;
+		}
+
+		.order-hiastory {
+			padding: 25px 20px;
+		}
+
+		.order-hiastory h4 {
+			font-size: 18px;
+		}
+
+		/*============================= Account Page End =============================*/
+		/*============================= My Cart Page Start =============================*/
+		.catpro-name {
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		/*============================= My Cart Page End =============================*/
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 575px   End
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 500px) {
+		.LineBGColor {
+			display: none;
+		}
+
+		.second-menu {
+			border-bottom: 1px solid #e5e5e5;
+		}
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 425px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 425px) {
+		.slid-img .owl-carousel .owl-item .pro-img img {
+			min-width: 470px;
+		}
+
+		.slidertext p {
+			display: none;
+		}
+
+		.slidertext h3 {
+			font-size: 20px;
+		}
+
+		.slidertext {
+			max-width: 200px;
+		}
+
+		.probnr-thumbtext a,
+		.left-text a.btn,
+		.btn.btn-primary,
+		.probnr-thumbtext a {
+			padding: 8px 25px;
+			font-size: 12px;
+		}
+
+		.btn.btn-primary {
+			margin-top: 10px;
+		}
+
+		.heading {
+			font-size: 20px;
+		}
+
+		.left-bnr h5 {
+			display: none;
+		}
+
+		.left-bnr h3 {
+			font-size: 20px;
+		}
+
+		.probnr-thumbtext span {
+			font-size: 14px;
+		}
+
+		.product-text h4 {
+			font-size: 14px;
+			line-height: 15px;
+			height: auto;
+		}
+
+		.bottom-bnr .botbnr-text h5 {
+			display: none;
+		}
+
+		.bottom-bnr .botbnr-dec {
+			max-width: 200px;
+			left: 20px;
+		}
+
+		.bottom-bnr .botbnr-text h3 {
+			font-size: 16px;
+			line-height: 25px;
+		}
+
+		/*============================= Login Page Start =============================*/
+		.login-bg {
+			padding: 0;
+		}
+
+		.check {
+			margin: 0;
+		}
+
+		.forgot a,
+		.check span {
+			font-size: 14px;
+			margin-left: 3px !important;
+		}
+
+		.login form {
+			padding: 25px !important;
+		}
+
+		input::placeholder {
+			font-size: 12px;
+		}
+
+		.sign-btn {
+			margin-top: 10px;
+		}
+
+		.gender label {
+			font-size: 12px;
+		}
+
+		/*============================= Login Page End =============================*/
+		/*============================= Product Page Start =============================*/
+		.pro-content h1 {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		.size-name span {
+			padding: 4px 10px;
+			font-size: 12px;
+		}
+
+		.number {
+			padding: 2px 30px;
+		}
+
+		.down {
+			padding: 2px 10px;
+		}
+
+		.tab-content h5 {
+			font-size: 16px;
+		}
+
+		.add-cart a {
+			padding: 10px 50px;
+			font-size: 12px;
+		}
+
+		.breadcrumb>li a::after {
+			padding: 0 8px;
+		}
+
+		.breadcrumb a {
+			font-size: 14px;
+		}
+
+		.qty-name {
+			margin: 10px 0 !important;
+			padding: 5px 0;
+		}
+
+		.rate:not(:checked)>label {
+			width: 20px;
+		}
+
+		.rate:not(:checked)>label:before {
+			font-size: 22px;
+			;
+		}
+
+		/*============================= Product Page End =============================*/
+		/*============================= Category Page Start =============================*/
+		.product-grid {
+			width: 100%;
+		}
+
+		/*============================= Category Page End =============================*/
+		/*============================= Purchase Page Start =============================*/
+		.detail-title,
+		.order-price,
+		.edit-add {
+			font-size: 16px;
+		}
+
+		.shopping-cart {
+			margin-top: 20px;
+		}
+
+		.cart-details h3,
+		.payment {
+			font-size: 18px;
+		}
+
+		.discount .btn,
+		.modal-footer .btn {
+			padding: 12px 25px;
+		}
+
+		.login-details span,
+		.address-detail span,
+		.address-detail p,
+		.change-detail,
+		.pay span {
+			font-size: 14px;
+		}
+
+		/*============================= Purchase Page End =============================*/
+		/*============================= About-us Page Start =============================*/
+		.about-txt {
+			font-size: 20px;
+			padding-bottom: 5px !important;
+		}
+
+		.shop-txt {
+			font-size: 18px;
+		}
+
+		.about-us p {
+			font-size: 14px;
+		}
+
+		/*============================= About-us Page End =============================*/
+		/*============================= Blog Page Start =============================*/
+		.single-blog-contact h5 {
+			font-size: 15px;
+		}
+
+		.single-blog-contact p {
+			font-size: 12px;
+		}
+
+		.single-blog-contact span {
+			font-size: 15px;
+		}
+
+		/*============================= Blog Page End =============================*/
+		/*============================= Thank You For Visit Start =============================*/
+		.visit {
+			font-size: 28px;
+		}
+
+		.thank-visit .btn {
+			margin-top: 20px;
+		}
+
+		/*============================= Thank You For Visit End =============================*/
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 425px   End
+ ==============================================================================================================================*/
+
+	/*=============================================================================================================================
+ 									Max-Width: 375px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 375px) {
+
+		/*============================= Header Page End =============================*/
+		.bottom-bnr img {
+			min-width: 450px;
+		}
+
+		.resNav {
+			overflow-x: auto;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			bottom: 0;
+			width: 100%;
+			background-color: var(--color-white);
+			z-index: 99999;
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+			transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+		}
+
+		.navActive {
+			left: -0%;
+		}
+
+		/*============================= Header Page End =============================*/
+		/*============================= Add to Cart Page Start =============================*/
+		.pull-left img {
+			max-height: 150px;
+		}
+
+		/*============================= Add to Cart Page End =============================*/
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width:   375px   End
+ ==============================================================================================================================*/
+
+	/*=============================================================================================================================
+ 									Max-Width: 320px   Start
+ ==============================================================================================================================*/
+	@media only screen and (max-width: 320px) {
+
+		.owl-carousel .owl-nav button.owl-next,
+		.owl-carousel .owl-nav button.owl-prev,
+		.owl-carousel button.owl-dot {
+			padding: 7px !important;
+		}
+
+		.bnrser-text .heading span {
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+		.ser-bnr {
+			padding: 30px 0;
+		}
+
+		/*============================= Login Page Start =============================*/
+		.login form {
+			padding: 20px !important;
+		}
+
+		.left-side input,
+		.right-side input,
+		.sign-btn,
+		.google {
+			padding: 5px;
+		}
+
+		.signin {
+			font-size: 25px;
+			margin-bottom: 15px;
+		}
+
+		.google img {
+			width: 15px;
+			height: 15px;
+		}
+
+		.sign-btn span,
+		.google span {
+			font-size: 12px;
+			margin-left: 3px !important;
+		}
+
+		.forgot a,
+		.check span {
+			font-size: 12px !important;
+		}
+
+		.an-account {
+			font-size: 12px;
+			margin-top: 10px;
+		}
+
+		/*============================= Login Page End =============================*/
+	}
+
+	/*=============================================================================================================================
+ 									Max-Width: 320px   End
+ ==============================================================================================================================*/

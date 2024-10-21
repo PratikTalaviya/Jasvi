@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  /* width: 0.4rem; Width of the scrollbar track */
+  width: 0; /* Hides the scrollbar */
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eeeeee; /* Background of the track */
+  width: 0.4rem; /* This doesn't affect the actual scrollbar track width in WebKit */
+}
+
+::-webkit-scrollbar-thumb {
+  background: slategrey;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5); /* Adds the shadow for the "narrower" effect */
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+:root {
+  box-sizing: border-box;
+  --padding: 1.2rem;
+  --secondary-padding: 0.6rem;
+  --round: 1.2rem;
+  --primary-color: ;
+  --secondary-color: ;
+  --background: ;
+  --text-primary: ;
+  --text-secondary: ;
+  --font-title: ;
+  --font-paragarph: ;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  font-size: 16px; /* Default font size for 16px equivalent */
+}
+
+/* Extra small devices (small phones) */
+@screen 2xs {
+  :root {
+    font-size: 12px; /* 12px equivalent */
+  }
+}
+
+/* Small devices (phones) */
+@screen xs {
+  :root {
+    font-size: 14px; /* 14px equivalent */
+  }
+}
+
+@screen sm {
+  :root {
+    font-size: 16px; /* 16px equivalent */
+  }
+}
+
+/* Medium devices (tablets) */
+@screen md {
+  :root {
+    font-size: 18px; /* 18px equivalent */
+  }
+}
+
+/* Large devices (desktops) */
+@screen lg {
+  :root {
+    font-size: 1.2vw; /* 20px equivalent */
+  }
+}
+
+/* Extra large devices (large desktops) */
+@screen xl {
+  :root {
+    font-size: 1.3vw; /* 22px equivalent */
+  }
+}
+
+/* 2X large devices (larger desktops) */
+@screen 2xl {
+  :root {
+    font-size: 1.4vw; /* 24px equivalent */
+  }
+}
+
+/* 3X large devices (HD monitors) */
+@screen 3xl {
+  :root {
+    font-size: 1.354vw; /* 26px equivalent */
+  }
+}
+
+/* 4X large devices (2K monitors) */
+@screen 4xl {
+  :root {
+    font-size: 1.4vw; /* 28px equivalent */
+  }
+}
+
+/* 5X large devices (4K monitors) */
+@screen 5xl {
+  :root {
+    font-size: 1.666vw; /* 32px equivalent */
+  }
+}

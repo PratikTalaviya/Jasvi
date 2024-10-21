@@ -1,0 +1,85 @@
+<%- include('../Header.ejs')-%>
+    <div class="main-content container-fluid">
+        <div class="page-title mb-3">
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-1 order-last">
+                    <h3>Create Sub Category</h3>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 order-first">
+                    <div class="d-flex justify-content-end">
+                        <a href="/admin/SubCategories" class="btn btn-secondary "> Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="basic-vertical-layouts">
+            <div class="row match-height">
+                <div class="col-md-12 col-sm-12 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form class="form form-vertical" action="/admin/AddSubCategoriesAction" method="POST">
+                                    <%if (message.length> 0) {%>
+                                        <div class="alert alert-dismissible"
+                                        style="background:#5bc093;border-style: solid;  border-color:#55a682; border-width:1px; color: #fff;">
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                            <strong>Message!</strong>
+                                            <%= message %>
+                                        </div>
+                                        <% } %>
+                                            <%if(error.length> 0) {%>
+                                                <div class="alert alert-dismissible"
+                                                    style="background:#fd7c7c;border-style: solid; border-color:#e64b4b; border-width:1px; color: #fff;">
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="alert"></button>
+                                                    <strong>Error!</strong>
+                                                    <%= error %>
+                                                </div>
+                                                <% } %>
+                                                    <div class="form-body">
+                                                        <row class="row flex-column align-content-around">
+                                                            <div class="col-md-12 mx-auto">
+                                                                <fieldset class="form-group">
+                                                                    <label for="basicSelect">Select Category</label>
+                                                                    <select class="form-select" name="category_id"
+                                                                        id="basicSelect" required>
+                                                                        <option value=""> Select One</option>
+                                                                        <% data.forEach(function(item){ %>
+                                                                            <option value="<%=item.id%>">
+                                                                                <%=item.name%>
+                                                                            </option>
+                                                                            <%})%>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="col-12 mx-auto">
+                                                                <div class="form-group">
+                                                                    <label for="first-name-vertical">Name</label>
+                                                                    <input type="text" id="first-name-vertical"
+                                                                        class="form-control" name="name"
+                                                                        placeholder="Enter Name" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mx-auto">
+                                                                <div class="form-group">
+                                                                    <label for="email-id-vertical">Slug</label>
+                                                                    <input type="text" id="email-id-vertical"
+                                                                        class="form-control" name="slug"
+                                                                        placeholder="Enter Slug" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mx-auto d-flex justify-content-center">
+                                                                <button type="submit"
+                                                                    class="btn btn-primary me-1 mb-1">Submit</button>
+                                                            </div>
+                                                    </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <%- include('../Footer.ejs')-%>

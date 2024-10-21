@@ -1,0 +1,75 @@
+# Node.js / Express backend
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+/.env
+*.log
+.DS_Store
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Database dumps
+*.sqlite
+*.mongo
+*.sql
+dump.rdb
+*.realm
+
+# Coverage directory used by testing tools
+coverage/
+.nyc_output/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Optional npm package
+*.tgz
+
+# Build output from the backend (if any)
+dist/
+build/
+out/
+
+# React frontend
+client/node_modules
+/node_modules
+/.pnp
+.pnp.js
+/build
+/dist
+/.cache
+/yarn-error.log
+/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# MacOS system files
+.DS_Store
+
+# Linux file system
+lost+found/
+
+# Windows system files
+Thumbs.db
+ehthumbs.db

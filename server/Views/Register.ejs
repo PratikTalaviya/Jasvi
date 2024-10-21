@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Admin</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <div id="auth">
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-sm-12 mx-auto">
+            <div class="card pt-4">
+                <div class="card-body">
+                    <div class="text-center mb-5">
+                        <img src="assets/images/favicon.svg" height="48" class='mb-4'>
+                        <h3>Sign Up</h3>
+                        <p>Please fill the form to register.</p>
+                    </div>
+                    <form action="/registerAction" method="POST">
+                        <%if (message.length > 0) {%>
+                            <div class="alert alert-dismissible" style="background:#5bc093;border-style: solid;  border-color:#55a682; border-width:1px; color: #fff;">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                <strong>Message!</strong> <%= message %>
+                            </div>
+                        <% } %>
+                        <%if(error.length > 0) {%>
+                            <div class="alert alert-dismissible" style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                                <button type="button" class="btn-close"data-bs-dismiss="alert"></button>
+                                <strong>Error!</strong> <%= error %>
+                            </div>
+                        <% } %>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="first-name-column">First Name</label>
+                                    <input type="text" id="first-name-column" class="form-control"  name="fname">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="last-name-column">Last Name</label>
+                                    <input type="text" id="last-name-column" class="form-control"  name="lname">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="email-id-column">Email Address</label>
+                                    <input type="email" id="email-id-column" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="username-column">Phone Number</label>
+                                    <input type="text" id="username-column" class="form-control" name="phno">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="country-floating">Password</label>
+                                    <input type="password" id="country-floating" class="form-control" name="password">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="company-column">Confirm Password</label>
+                                    <input type="password" id="company-column" class="form-control" name="cpassword">
+                                </div>
+                            </div>
+                        </div>
+                        Have an account? <a href="/"> Login</a>
+                        <div class="clearfix">
+                            <button class="btn btn-primary float-end">Submit</button>
+                        </div>
+                    </form>
+                    <!-- <div class="divider">
+                        <div class="divider-text">OR</div>
+                    </div> -->
+                    <!-- <div class="row">
+                        <div class="col-sm-6">
+                            <button class="btn btn-block mb-2 btn-primary"><i data-feather="facebook"></i> Facebook</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-block mb-2 btn-secondary"><i data-feather="github"></i> Github</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

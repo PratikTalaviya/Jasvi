@@ -1,0 +1,523 @@
+<%- include('../Header.ejs');-%>
+    <div class="main-content container-fluid">
+        <div class="page-title mb-3">
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-1 order-last">
+                    <h3>Edit Product</h3>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 order-first">
+                    <div class="d-flex justify-content-end">
+                        <a href="/admin/AllProduct" class="btn btn-secondary">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="section" action="/admin/EditProductAction/<%=data.id%>" method="POST"
+            enctype="multipart/form-data">
+            <%if (message.length> 0) {%>
+                <div class="alert alert-dismissible"
+                    style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Error!</strong>
+                    <%= message %>
+                </div>
+                <% } %>
+                    <%if(error.length> 0) {%>
+                        <div class="alert alert-dismissible"
+                            style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <strong>Error!</strong>
+                            <%= error %>
+                        </div>
+                        <% } %>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <div class="form-body">
+                                                    <div class="row flex-column align-content-around">
+                                                        <div class="col-12 mx-auto">
+                                                            <div class="form-group">
+                                                                <label for="first-name-vertical">Title</label>
+                                                                <input type="text" id="first-name-vertical"
+                                                                    class="form-control" name="title"
+                                                                    placeholder="<%= data.title %> ">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mx-auto">
+                                                            <div class="form-group">
+                                                                <label for="email-id-vertical">Slug</label>
+                                                                <input type="text" id="email-id-vertical"
+                                                                    class="form-control" name="slug"
+                                                                    placeholder="<%= data.slug %>">
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="col-12 mx-auto">
+                                                            <div class="form-group mb-3">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                    class="form-label">Description</label>
+                                                                <textarea class="form-control" name="sort_details"
+                                                                    id="exampleFormControlTextarea1" rows="5"
+                                                                    ></textarea>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="col-12 mx-auto">
+                                                            <div class="form-group mb-3">
+                                                                <div id="container">
+                                                                    <textarea name="sort_details"
+                                                                        id="editor"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <div class="form-body">
+                                                    <h4>Media</h4>
+                                                    <div class="row flex-column">
+                                                        <div class="col-4">
+
+                                                            <div class="form-group">
+                                                                <h6 class="mb-3">Current Image *</h6>
+                                                                <div class="preview-zone">
+                                                                    <div class="box box-solid">
+                                                                        <div class="box-body">
+                                                                            <img src="<%= data.photo ? '/assets/AddProductImage/Photos/'+data.photo : 'https://geniusdevs.com/codecanyon/omnimart40/assets/images/placeholder.png' %>"
+                                                                                alt="" width="100">
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="mt-1">Image Size Should Be 60 x
+                                                                        60.</span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="input-group mb-2 dropzone-wrapper">
+                                                                    <input type="file"
+                                                                        class="form-control bg-white dropzone"
+                                                                        id="inputGroupFile02" name="photo"
+                                                                        placeholder="choose images">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <h4>Pricing</h4>
+                                                <div class="form-body">
+                                                    <div class="row flex-column">
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Indian Price</label>
+                                                                <div class="input-group mb-3">
+                                                                    <span class="input-group-text">$</span>
+                                                                    <input type="number" name="In_price"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest dollar)"
+                                                                        placeholder="<%= data.In_price %>">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Rest of India Price </label>
+                                                                <div class="input-group mb-3">
+                                                                    <span class="input-group-text">$</span>
+                                                                    <input type="number" name="outIn_price"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest dollar)"
+                                                                        placeholder="<%= data.outIn_price %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="col-lg-12 mb-1">
+                                                        <div class="form-group">
+                                                            <label for="password">Discount Percentage </label>
+                                                            <div class="input-group mb-3">
+                                                                <span class="input-group-text">%</span>
+                                                                <input type="number" name="discount_percentage"
+                                                                    class="form-control"
+                                                                    placeholder="Enter Discount Percentage"
+                                                                    >
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <h4>Inventory</h4>
+                                                <div class="form-body">
+                                                    <div class="row flex-column">
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Sku code</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" name="sku_code"
+                                                                        class="form-control"
+                                                                        placeholder="<%= data.sku_code %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Product weight</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="number" name="weight"
+                                                                        class="form-control" step=0.01
+                                                                        placeholder="<%= data.weight %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <fieldset class="form-group">
+                                                                    <label for="basicSelect">Product availbale</label>
+                                                                    <select name="availablefor" class="form-select"
+                                                                        required>
+                                                                        <option value="COD">Only COD</option>
+                                                                        <option value="Pripaid">Only Pripaid </option>
+                                                                        <option value="Both">Both </option>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <div class="form-body">
+                                                    <div class="row flex-column align-content-around">
+                                                        <div class="col-12">
+                                                            <button type="submit"
+                                                                class="btn btn-primary me-1 mb-1">Save</button>
+                                                            <button type="submit" class="btn btn-primary me-1 mb-1">Save
+                                                                & Edit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <h4>Product Discription</h4>
+                                                <div class="form-body">
+                                                    <div class="row flex-column">
+                                                        <div class="col-lg-12 mb-1">
+                                                            <!-- <div class="form-group">
+                                                            <label for="password">Type</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" name="ptype" class="form-control"
+                                                                    placeholder="e.g T-shait" >
+                                                            </div>
+                                                        </div> -->
+                                                            <fieldset class="form-group">
+                                                                <label for="basicSelect">Select Category</label>
+                                                                <select name="ptype" class="form-select">
+                                                                    <option value="">Select One</option>
+                                                                    <% CategoryList.forEach(function(row){ %>
+                                                                        <option value="<%=row.name%>">
+                                                                            <%=row.name%>
+                                                                        </option>
+                                                                        <%})%>
+                                                                </select>
+                                                            </fieldset>
+                                                            <fieldset class="form-group">
+                                                                <label for="basicSelect">Select Starching</label>
+                                                                <select name="customStaching" class="form-select" required>
+                                                                    <option value="">Select Starching</option>
+                                                                        <option value="true">true</option>
+                                                                        <option value="false">False</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Size</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" name="size" class="form-control"
+                                                                        placeholder="<%= data?.size %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Fabric</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" name="fabric"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest dollar)"
+                                                                        placeholder="<%= data?.fabric %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Pattern</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" name="pattern"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest dollar)"
+                                                                        placeholder="<%= data?.pattern %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <div class="form-group">
+                                                                <label for="password">Sleeve</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" name="sleeves"
+                                                                        class="form-control"
+                                                                        aria-label="Amount (to the nearest dollar)"
+                                                                        placeholder="<%= data?.sleeves %> ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form form-vertical">
+                                                <div class="form-body">
+                                                    <div class="row flex-column">
+                                                        <div class="col-lg-12 mb-1">
+                                                            <fieldset class="form-group">
+                                                                <label for="basicSelect">Select Category</label>
+                                                                <select name="category_id" id="category_id"
+                                                                    class="form-select">
+                                                                    <option value="">Select One</option>
+                                                                    <% CategoryList.forEach(function(row){ %>
+                                                                        <option value="<%=row.id%>">
+                                                                            <%=row.name%>
+                                                                        </option>
+                                                                        <%})%>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <fieldset class="form-group">
+                                                                <label for="basicSelect">Select Sub Category</label>
+                                                                <select class="form-select" id="subcategory_id"
+                                                                    name="subcategory_id">
+                                                                    <option value="">Select One</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-1">
+                                                            <fieldset class="form-group">
+                                                                <label for="basicSelect">Select Child Category</label>
+                                                                <select name="child_id" id="child_id"
+                                                                    class="form-select">
+                                                                    <option value="">Select One</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        </form>
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#category_id').on('change', function () {
+                var id = this.value;
+                $("#subcategory_id").html('');
+                $.ajax({
+                    url: "/admin/GetSubCatList",
+                    type: "POST",
+                    data: {
+                        id: id,
+                        _token: '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function (result) {
+                        $('#subcategory_id').html('<option value="">Select Name</option>');
+                        $.each(result, function (key, value) {
+                            $("#subcategory_id").append('<option  value="' +
+                                value._id + '">' + value.name +
+                                '</option>');
+                        });
+                    }
+                });
+            });
+            $('#subcategory_id').on('change', function () {
+                const id = this.value;
+                $("#child_id").html('');
+                $.ajax({
+                    url: "/admin/GetChildCatList",
+                    type: "POST",
+                    data: {
+                        id: id,
+                        _token: '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function (result) {
+                        console.log(result);
+                        $('#child_id').html('<option value="">Select Name</option>');
+                        $.each(result, function (key, value) {
+                            $("#child_id").append('<option  value="' +
+                                value._id + '">' + value.c_name +
+                                '</option>');
+                        });
+                    }
+                });
+
+
+            });
+        });
+    </script>
+    <script>
+        CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
+            toolbar: {
+                items: [
+                    'exportPDF', 'exportWord', '|',
+                    'findAndReplace', 'selectAll', '|',
+                    'heading', '|',
+                    'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+                    'bulletedList', 'numberedList', 'todoList', '|',
+                    'outdent', 'indent', '|',
+                    'undo', 'redo',
+                    '-',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+                    'alignment', '|',
+                    'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'codeBlock', 'htmlEmbed', '|',
+                    'specialCharacters', 'horizontalLine', 'pageBreak', '|',
+                    'textPartLanguage', '|',
+                    'sourceEditing'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            list: {
+                properties: {
+                    styles: true,
+                    startIndex: true,
+                    reversed: true
+                }
+            },
+            heading: {
+                options: [
+                    { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                    { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                    { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+                    { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+                    { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+                    { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
+                    { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
+                ]
+            },
+            placeholder: '',
+            fontFamily: {
+                options: [
+                    'default',
+                    'Arial, Helvetica, sans-serif',
+                    'Courier New, Courier, monospace',
+                    'Georgia, serif',
+                    'Lucida Sans Unicode, Lucida Grande, sans-serif',
+                    'Tahoma, Geneva, sans-serif',
+                    'Times New Roman, Times, serif',
+                    'Trebuchet MS, Helvetica, sans-serif',
+                    'Verdana, Geneva, sans-serif'
+                ],
+                supportAllValues: true
+            },
+            fontSize: {
+                options: [10, 12, 14, 'default', 18, 20, 22],
+                supportAllValues: true
+            },
+            htmlSupport: {
+                allow: [
+                    {
+                        name: /.*/,
+                        attributes: true,
+                        classes: true,
+                        styles: true
+                    }
+                ]
+            },
+            htmlEmbed: {
+                showPreviews: true
+            },
+            link: {
+                decorators: {
+                    addTargetToExternalLinks: true,
+                    defaultProtocol: 'https://',
+                    toggleDownloadable: {
+                        mode: 'manual',
+                        label: 'Downloadable',
+                        attributes: {
+                            download: 'file'
+                        }
+                    }
+                }
+            },
+            mention: {
+                feeds: [
+                    {
+                        marker: '@',
+                        feed: [
+                            '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+                            '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+                            '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+                            '@sugar', '@sweet', '@topping', '@wafer'
+                        ],
+                        minimumCharacters: 1
+                    }
+                ]
+            },
+            removePlugins: [
+                'CKBox',
+                'CKFinder',
+                'EasyImage',
+                'RealTimeCollaborativeComments',
+                'RealTimeCollaborativeTrackChanges',
+                'RealTimeCollaborativeRevisionHistory',
+                'PresenceList',
+                'Comments',
+                'TrackChanges',
+                'TrackChangesData',
+                'RevisionHistory',
+                'Pagination',
+                'WProofreader',
+
+                'MathType'
+            ]
+        });
+    </script>
+
+
+    <%- include('../Footer')-%>

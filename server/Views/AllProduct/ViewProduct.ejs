@@ -1,0 +1,161 @@
+<%- include('../Header.ejs');-%>
+    <div class="main-content container-fluid">
+        <div class="page-title mb-3">
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-1 order-last">
+                    <h3>View Product</h3>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 order-first">
+                    <div class="d-flex justify-content-end">
+                        <a href="/admin/AllProduct" class="btn btn-secondary">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%if (message.length> 0) {%>
+            <div class="alert alert-dismissible"
+                style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Error!</strong>
+                <%= message %>
+            </div>
+            <% } %>
+                <%if(error.length> 0) {%>
+                    <div class="alert alert-dismissible"
+                        style="background:#fd7c7c;border-style: solid;  border-color:#e64b4b; border-width:1px; color: #fff;">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong>Error!</strong>
+                        <%= error %>
+                    </div>
+                    <% } %>
+                        <section id="content-types">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="slider slider-for img-1">
+                                                <div class="main">
+                                                    <img class="img-fluid"
+                                                        src="/assets/AddProductImage/Photos/<%=data.photo%>"
+                                                        alt="Card image cap1" />
+                                                </div>
+                                                <% galleriesList.forEach(function(gallery_image){ %>
+                                                    <div class="main">
+                                                        <img class="card-img-top img-fluid"
+                                                            src="/assets/AddProductImage/Gallery/<%= gallery_image.photo %>"
+                                                            alt="Card image cap2" />
+                                                    </div>
+                                                    <%})%>
+                                            </div>
+                                            <div class="card-body mx-auto">
+                                                <div class="slider slider-nav img">
+                                                    <div class="sub">
+                                                        <img class="img-fluid"
+                                                            src="/assets/AddProductImage/Photos/<%=data.photo%>"
+                                                            alt="Card image cap" />
+                                                    </div>
+                                                    <% galleriesList.forEach(function(gallery_image){ %>
+                                                        <div class="sub">
+                                                            <img class="card-img-top img-fluid"
+                                                                src="/assets/AddProductImage/Gallery/<%= gallery_image.photo %>"
+                                                                alt="Card image cap" />
+                                                        </div>
+                                                        <%})%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-content p-4">
+                                            <h3>
+                                                <%= data.title %>
+                                            </h3>
+                                            <div class="col-md-12">
+                                            <b>    Category:</b> <%= data?.category_id?.name %>
+                                            </div>
+
+                                            <div class="">
+                                                <h4 class="mt-3">Indian Price: ₹<%= data?.In_price %>
+                                                </h4>
+                                                <h4 class="mt-3 ">Out of India Price: $<%= data?.outIn_price %>
+                                                </h4>
+                                            </div>
+                                            <p>
+                                            </p>
+                                            <p>
+                                                <%= data.sort_details %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+    </div>
+    <%- include('../Footer')-%>
+        <script>
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav',
+                infinite: false,
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                focusOnSelect: true,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            });
+        </script>
+        <script>
+            $('.add').click(function () {
+                if ($(this).prev().val() < 50) {
+                    $(this).prev().val(+$(this).prev().val() + 1);
+                }
+            });
+            $('.sub').click(function () {
+                if ($(this).next().val() > 1) {
+                    if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+                }
+            });
+        </script>
+        <style>
+            .img-1 {
+                border-radius: 11px;
+                padding: 1rem;
+                margin: 0rem 0;
+                position: relative;
+                height: 30rem;
+            }
+
+            .main img {
+                height: 28rem;
+            }
+
+            .img {
+                height: 5rem;
+                margin: 0 3.5rem;
+            }
+
+            .img img {
+                height: 5rem;
+                border: 1px solid #e9e9e9;
+                padding: 3px;
+            }
+
+            .sub {
+                margin: 0;
+            }
+
+            .sub.slick-slide {
+                width: 90px !important;
+                margin: 0 10px;
+            }
+        </style>
